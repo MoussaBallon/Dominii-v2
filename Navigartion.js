@@ -1,14 +1,21 @@
 import { View, Text } from "react-native";
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import TabBar from "./components/TabBar";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+
+
 import HomeScreen from "./screens/HomeScreen";
 import RestaurantScreen from "./screens/RestaurantScreen";
 import PanierScreen from "./screens/PanierScreen";
 import OrdersScreen from "./screens/OrdersScreen";
 import ProfilScreen from "./screens/ProfilScreen";
+
+
 const Stack = createNativeStackNavigator();
 
-const Navigartion = () => {
+function Navigation  ()  {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -22,8 +29,9 @@ const Navigartion = () => {
         <Stack.Screen name="Order" component={OrdersScreen} />
         <Stack.Screen name="Profil" component={ProfilScreen} />
       </Stack.Navigator>
+      <TabBar />
     </NavigationContainer>
   );
 };
 
-export default Navigartion;
+export default Navigation;

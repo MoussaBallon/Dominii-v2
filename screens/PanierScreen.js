@@ -5,7 +5,6 @@ import TabBar from "../components/TabBar";
 const PanierScreen = () => {
   return (
     <View>
-      <TabBar />
       <Text>PanierScreen</Text>
     </View>
   );

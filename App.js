@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import Navigartion from "./Navigartion";
+import Navigation from "./Navigartion";
+import TabBar from "./components/TabBar";
 
 export default function App() {
-  return <Navigartion />;
+  return <Navigation />;
 }

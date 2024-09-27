@@ -12,7 +12,7 @@ const Pub = () => {
           <Text className="text-gray-700 text-center text-xs">
             Livrason Gratuite pour tous les menbres
           </Text>
-          <Text className="pr-10 text-5xl font-bold text-red-300 pt-5 pb-5">
+          <Text className="pr-10 text-5xl font-bold text-red-500 pt-5 pb-5">
             60%
           </Text>
           <Text className="font-semibold text-gray-700">

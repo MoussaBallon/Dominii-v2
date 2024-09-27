@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StatusBar, ScrollView } from "react-native";
+import { View, Text, TextInput, StatusBar, ScrollView, StyleSheet } from "react-native";
 import React from "react";
 import * as Icon from "react-native-feather";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -6,7 +6,9 @@ import Categories from "../components/Categories";
 import Pub from "../components/Pub";
 import { Restaurants } from "../constants";
 import Resto from "../components/Resto";
-// import TabBar from "../components/TabBar";
+import { useNavigation } from "@react-navigation/native";
+
+
 
 const HomeScreen = () => {
   return (
@@ -16,13 +18,14 @@ const HomeScreen = () => {
       <View className="px-4 pt-6">
         <Text className="text-lg font-semibold pb-2">Bienvenue</Text>
         <Text className="font-bold text-2xl">Abdoul. 👋</Text>
+        {/* <Icon name="user" size={30} color="#000" style={styles.icon} /> */}
       </View>
       {/* search bar */}
 
       <View className="flex flex-row items-center space-x-2 px-4 pb-2 pt-6">
         <View className="flex-row flex-1 items-center p-3 rounded-full border border-gray-300">
           <Icon.Search height="25" width="25" stroke="gray" />
-          <TextInput placeholder="Restaurants" className="ml-2 flex-1" />
+          <TextInput placeholder="Cuisiniers, plats" className="ml-2 flex-1" />
         </View>
       </View>
       <Categories />
@@ -31,7 +34,7 @@ const HomeScreen = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ padding: 20 }}
       >
-        {/* <Pub /> */}
+        <Pub />
         {/* featured */}
         <View className="mt-5">
           {Restaurants.map((resto, index) => {
@@ -41,6 +44,12 @@ const HomeScreen = () => {
       </ScrollView>
     </SafeAreaView>
   );
+  
 };
-
+// const styles = StyleSheet.create({
+//   icon: {
+//     position: 'absolute', // positionnement absolu
+//     top: 20,
+//   }
+// });
 export default HomeScreen;

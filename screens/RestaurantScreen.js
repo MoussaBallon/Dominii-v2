@@ -32,7 +32,7 @@ const RestaurantScreen = () => {
             </TouchableOpacity>
           </View>
         </ScrollView>
-        <ScrollView>
+        <ScrollView>         
           <View
             style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
             className="bg-white pt-3"
