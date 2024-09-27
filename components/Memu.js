@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
 const Menu = ({ item }) => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       <View className="flex-row items-center bg-white p-3 h-full rounded-3xl shadow-2xl mx2">

@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StatusBar, ScrollView, StyleSheet } from "react-native";
+import { View, Text, TextInput, StatusBar, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import * as Icon from "react-native-feather";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -11,6 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView className="flex-1">
       <StatusBar barStyle="light-content" />
@@ -41,6 +42,16 @@ const HomeScreen = () => {
           })}
         </View>
       </ScrollView> 
+      <View>
+      {Restaurants.map((resto, index) => {
+        return (
+          <TouchableOpacity 
+            key={index} 
+            onPress={() => navigation.navigate('resto', {...items})}>
+          </TouchableOpacity>
+        );
+      })}
+    </View>
     </SafeAreaView>
   );
   
