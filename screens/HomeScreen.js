@@ -4,21 +4,20 @@ import * as Icon from "react-native-feather";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Categories from "../components/Categories";
 import Pub from "../components/Pub";
-import { Restaurants } from "../constants";
 import Resto from "../components/Resto";
+import { Restaurants } from "../constants";
 import { useNavigation } from "@react-navigation/native";
 
 
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1">
       <StatusBar barStyle="light-content" />
       {/* <TabBar /> */}
       <View className="px-4 pt-6">
         <Text className="text-lg font-semibold pb-2">Bienvenue</Text>
         <Text className="font-bold text-2xl">Abdoul. 👋</Text>
-        {/* <Icon name="user" size={30} color="#000" style={styles.icon} /> */}
       </View>
       {/* search bar */}
 
@@ -41,15 +40,10 @@ const HomeScreen = () => {
             return <Resto items={resto} key={index} />;
           })}
         </View>
-      </ScrollView>
+      </ScrollView> 
     </SafeAreaView>
   );
   
 };
-// const styles = StyleSheet.create({
-//   icon: {
-//     position: 'absolute', // positionnement absolu
-//     top: 20,
-//   }
-// });
+
 export default HomeScreen;

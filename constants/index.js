@@ -1,8 +1,4 @@
-import { Image } from "react-native";
-
-
-export const Restaurants = () =>{ 
-  return ([
+export const Restaurants = [
   {
     id: 1,
     name: "The Burgery.",
@@ -101,4 +97,4 @@ export const Restaurants = () =>{
     adresse: "Sotuba",
     nourriture: [],
   },
-])};
+];
